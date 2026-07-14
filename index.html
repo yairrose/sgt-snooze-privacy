@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Privacy Policy for Sgt. Snooze.">
+    <title>Privacy Policy — Sgt. Snooze</title>
+    <style>
+      :root { color-scheme: dark; }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: #17150f;
+        color: #f5f0df;
+        font: 17px/1.65 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+      main { max-width: 760px; margin: 0 auto; padding: 48px 24px 72px; }
+      header { border-bottom: 3px solid #c9a34a; margin-bottom: 32px; padding-bottom: 24px; }
+      .eyebrow { color: #c9a34a; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+      h1 { font-size: clamp(2rem, 6vw, 3.5rem); line-height: 1.08; margin: 8px 0; }
+      h2 { color: #f1cd74; font-size: 1.25rem; margin: 36px 0 8px; }
+      p, li { max-width: 70ch; }
+      ul { padding-left: 1.3rem; }
+      a { color: #f1cd74; }
+      .updated { color: #c6c1b0; margin: 0; }
+      footer { border-top: 1px solid #5d5848; color: #c6c1b0; font-size: .9rem; margin-top: 48px; padding-top: 20px; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="eyebrow">Sgt. Snooze</div>
+        <h1>Privacy Policy</h1>
+        <p class="updated">Last updated: July 13, 2026</p>
+      </header>
+
+      <p>Sgt. Snooze is an offline alarm clock. The app has no account system, advertising, analytics SDK, or developer-operated backend. It does not send your alarm data to the developer or sell or share it.</p>
+
+      <h2>Data the app stores locally</h2>
+      <p>The app stores the following on your device so it can schedule and run alarms:</p>
+      <ul>
+        <li>Alarm details: time, selected weekdays or one-shot date, enabled state, label, persona, challenge, snooze, and volume settings.</li>
+        <li>Optional onboarding segmentation response and onboarding state.</li>
+        <li>Technical scheduling data: native notification/alarm identifiers, pending fire records, and snooze ownership needed to route and clean up alarms reliably.</li>
+      </ul>
+      <p>This data is stored in app-local storage: AsyncStorage, Android device-protected SharedPreferences for native delivery state, and iOS UserDefaults for AlarmKit action routing. Sgt. Snooze does not transmit these records to developer-controlled servers.</p>
+      <p>Uninstalling removes the app’s local copy. Operating-system backup, restore, or device-transfer behavior is controlled by the platform and the user’s device settings; the app cannot promise removal of any OS-managed backup copy. Android’s configuration disables Android Auto Backup, subject to platform/device-transfer behavior.</p>
+
+      <h2>Permissions and their purpose</h2>
+      <ul>
+        <li><strong>Notifications</strong> — deliver local notification alerts and sounds, including the iOS fallback path and Android auxiliary alarm UI.</li>
+        <li><strong>AlarmKit on supported iPhones</strong> — schedule a system alarm when the user grants AlarmKit authorization. If it is unavailable or denied, the app uses the local notification fallback.</li>
+        <li><strong>Exact alarms</strong> (<code>USE_EXACT_ALARM</code> / <code>SCHEDULE_EXACT_ALARM</code>) — let Android schedule the first-party alarm-clock trigger at the requested time.</li>
+        <li><strong>Full-screen notifications</strong> (<code>USE_FULL_SCREEN_INTENT</code>) — let Android show the ringing UI over the lock screen when the OS and user allow it.</li>
+        <li><strong>Run at startup</strong> (<code>RECEIVE_BOOT_COMPLETED</code>) — restore Android native schedules after reboot.</li>
+        <li><strong>Foreground service, wake lock, and audio settings</strong> — play the Android alarm on the alarm stream and keep the active alarm flow running. iOS background-audio mode is used only for an active in-app ring; the app does not use a silent armed-state keep-alive.</li>
+        <li><strong>Battery-optimization settings</strong> (optional Android guidance) — open the relevant settings page on devices whose OEM power management may affect delivery.</li>
+      </ul>
+      <p>The app does not request microphone, contacts, location, camera, or storage access. No permission is used to collect personal information.</p>
+
+      <h2>Spoken audio</h2>
+      <p>Bundled recorded voice clips are the normal in-app voice path. Where a line has no bundled clip, the app asks the operating system’s text-to-speech service to speak it. Sgt. Snooze does not run a speech service or receive the text; system TTS providers and their device/network behavior are governed by their own settings and policies.</p>
+
+      <h2>Children</h2>
+      <p>The app does not knowingly collect personal information from anyone, including children.</p>
+
+      <h2>Changes</h2>
+      <p>If this policy changes, the updated version will be published at this same public URL and in the app before the change takes effect where required.</p>
+
+      <h2>Contact</h2>
+      <p>Questions about this policy: <a href="mailto:yairrose@gmail.com">yairrose@gmail.com</a></p>
+
+      <footer>© 2026 Sgt. Snooze</footer>
+    </main>
+  </body>
+</html>
