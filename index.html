@@ -34,45 +34,46 @@
         <p class="updated">Last updated: July 14, 2026</p>
       </header>
 
-      <p>Sgt. Snooze is an offline alarm clock. The app has no account system, advertising, analytics SDK, or developer-operated backend. It does not send your alarm data to the developer or sell or share it.</p>
+      <p>Sgt. Snooze is an offline alarm clock. The app has no account system, advertising, analytics SDK, or developer-operated backend. It does not send, sell, or share your alarm data.</p>
 
       <h2>Data the app stores locally</h2>
       <p>The app stores the following on your device so it can schedule and run alarms:</p>
       <ul>
         <li>Alarm details: time, selected weekdays or one-shot date, enabled state, label, persona, challenge, snooze, and volume settings.</li>
-        <li>Optional onboarding segmentation response and onboarding state.</li>
+        <li>Onboarding data: an optional onboarding-segmentation response, plus onboarding completion state.</li>
         <li>Technical scheduling data: native notification/alarm identifiers, pending fire records, and snooze ownership needed to route and clean up alarms reliably.</li>
       </ul>
-      <p>This data is stored in app-local storage: AsyncStorage, Android device-protected SharedPreferences for native delivery state, and iOS UserDefaults for AlarmKit action routing. Sgt. Snooze does not transmit these records to developer-controlled servers.</p>
-      <p>Uninstalling removes the app’s local copy. Operating-system backup, restore, or device-transfer behavior is controlled by the platform and the user’s device settings; the app cannot promise removal of any OS-managed backup copy. Android’s configuration disables Android Auto Backup, subject to platform/device-transfer behavior.</p>
+      <p>This data is stored in app-local storage: AsyncStorage; Android device-protected SharedPreferences for native delivery state; and iOS UserDefaults for AlarmKit action routing. Sgt. Snooze does not transmit these records to developer-controlled servers.</p>
+      <p>Uninstalling removes the app's local copy. Operating-system backup, restore, or device-transfer behavior is controlled by the platform and your device settings; the app cannot promise removal of any OS-managed backup copy. On Android, the app's manifest configuration disables Android Auto Backup for this data, subject to standard platform and device-transfer behavior.</p>
 
       <h2>Permissions and their purpose</h2>
       <ul>
         <li><strong>Notifications</strong> — deliver local notification alerts and sounds, including the iOS fallback path and Android auxiliary alarm UI.</li>
-        <li><strong>AlarmKit on supported iPhones</strong> — schedule a system alarm when the user grants AlarmKit authorization. If it is unavailable or denied, the app uses the local notification fallback.</li>
-        <li><strong>Exact alarms</strong> (<code>USE_EXACT_ALARM</code> / <code>SCHEDULE_EXACT_ALARM</code>) — let Android schedule the first-party alarm-clock trigger at the requested time.</li>
+        <li><strong>AlarmKit (supported iPhones)</strong> — schedules a system alarm once you grant AlarmKit authorization. If AlarmKit is unavailable or denied, the app uses the local notification fallback instead.</li>
+        <li><strong>Exact alarms</strong> (<code>USE_EXACT_ALARM</code> / <code>SCHEDULE_EXACT_ALARM</code>) — let Android schedule the alarm trigger at the exact requested time.</li>
         <li><strong>Full-screen notifications</strong> (<code>USE_FULL_SCREEN_INTENT</code>) — let Android show the ringing UI over the lock screen when the OS and user allow it.</li>
-        <li><strong>Run at startup</strong> (<code>RECEIVE_BOOT_COMPLETED</code>) — restore Android native schedules after reboot.</li>
-        <li><strong>Foreground service, wake lock, and audio settings</strong> — play the Android alarm on the alarm stream and keep the active alarm flow running. iOS background-audio mode is used only for an active in-app ring; the app does not use a silent armed-state keep-alive.</li>
-        <li><strong>Battery-optimization settings</strong> (optional Android guidance) — open the relevant settings page on devices whose OEM power management may affect delivery.</li>
+        <li><strong>Vibration</strong> (<code>VIBRATE</code>) — vibrate when an alarm fires.</li>
+        <li><strong>Run at startup</strong> (<code>RECEIVE_BOOT_COMPLETED</code>) — restore native Android schedules after reboot.</li>
+        <li><strong>Foreground service, wake lock, and audio settings</strong> — play the Android alarm on the alarm audio stream and keep the active alarm flow running. The iOS background-audio mode is used only during an active in-app ring; the app does not use a silent, always-on keep-alive to maintain the armed state.</li>
+        <li><strong>Battery-optimization settings (optional, Android only)</strong> — open the relevant device settings page, since some manufacturers' power management can affect alarm delivery.</li>
       </ul>
       <p>The app does not request microphone, contacts, location, camera, or storage access. No permission is used to collect personal information.</p>
 
       <h2>Spoken audio</h2>
-      <p>Bundled recorded voice clips are the normal in-app voice path. Where a line has no bundled clip, the app asks the operating system’s text-to-speech service to speak it. Sgt. Snooze does not run a speech service or receive the text; system TTS providers and their device/network behavior are governed by their own settings and policies.</p>
+      <p>Bundled recorded voice clips are the app's default voice source. Where a line has no bundled clip, the app asks the operating system's text-to-speech service to speak it instead. Sgt. Snooze does not run a speech service or receive the underlying text; system TTS providers and their device or network behavior are governed by their own settings and policies.</p>
 
       <h2>Purchases and subscriptions</h2>
       <p>Sgt. Snooze does not currently offer paid features, in-app purchases, or subscriptions.</p>
       <p>If a future version offers a purchase or subscription, the Apple App Store or Google Play will process the standard store transaction. Their handling of account, payment, and purchase-history data is governed by their own policies. Before that feature becomes available, this policy and the applicable App Store privacy information and Google Play Data safety information will be updated to state exactly whether Sgt. Snooze receives, stores, or transmits any purchase receipt, entitlement, identifier, or other purchase-related data. The app and store listing will also provide the applicable price, billing period, renewal, cancellation, Terms of Use, and restore-purchase information.</p>
 
       <h2>Children</h2>
-      <p>The app does not knowingly collect personal information from anyone, including children.</p>
+      <p>The app does not knowingly collect personal information from anyone, including children under 13 (or the relevant minimum age under applicable local law). If you believe a child has provided personal information through the app, contact us using the details below and we will address it.</p>
 
       <h2>Changes</h2>
-      <p>If this policy changes, the updated version will be published at this same public URL and in the app before the change takes effect where required.</p>
+      <p>If this policy changes, the updated version will be published at this same URL and, where required by law, in the app before the change takes effect.</p>
 
       <h2>Contact</h2>
-      <p>Questions about this policy: <a href="mailto:yairrose@gmail.com">yairrose@gmail.com</a></p>
+      <p>Questions about this policy: <a href="mailto:sentinelgroup24@gmail.com">sentinelgroup24@gmail.com</a></p>
 
       <footer>© 2026 Sgt. Snooze</footer>
     </main>
