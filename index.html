@@ -1,81 +1,58 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Privacy Policy for Sgt. Snooze.">
-    <title>Privacy Policy — Sgt. Snooze</title>
-    <style>
-      :root { color-scheme: dark; }
-      * { box-sizing: border-box; }
-      body {
-        margin: 0;
-        background: #17150f;
-        color: #f5f0df;
-        font: 17px/1.65 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      }
-      main { max-width: 760px; margin: 0 auto; padding: 48px 24px 72px; }
-      header { border-bottom: 3px solid #c9a34a; margin-bottom: 32px; padding-bottom: 24px; }
-      .eyebrow { color: #c9a34a; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
-      h1 { font-size: clamp(2rem, 6vw, 3.5rem); line-height: 1.08; margin: 8px 0; }
-      h2 { color: #f1cd74; font-size: 1.25rem; margin: 36px 0 8px; }
-      p, li { max-width: 70ch; }
-      ul { padding-left: 1.3rem; }
-      a { color: #f1cd74; }
-      .updated { color: #c6c1b0; margin: 0; }
-      footer { border-top: 1px solid #5d5848; color: #c6c1b0; font-size: .9rem; margin-top: 48px; padding-top: 20px; }
-    </style>
-  </head>
-  <body>
-    <main>
-      <header>
-        <div class="eyebrow">Sgt. Snooze</div>
-        <h1>Privacy Policy</h1>
-        <p class="updated">Last updated: July 16, 2026</p>
-      </header>
-
-      <p>Sgt. Snooze is an offline alarm clock published by Grumblebox. The app has no account system, advertising, analytics SDK, or developer-operated backend. It does not send, sell, or share your alarm data.</p>
-
-      <h2>Data the app stores locally</h2>
-      <p>The app stores the following on your device so it can schedule and run alarms:</p>
-      <ul>
-        <li>Alarm details: time, selected weekdays or one-shot date, enabled state, label, persona, challenge, snooze, and volume settings.</li>
-        <li>Onboarding data: an optional onboarding-segmentation response, plus onboarding completion state.</li>
-        <li>Technical scheduling data: native notification/alarm identifiers, pending fire records, and snooze ownership needed to route and clean up alarms reliably.</li>
-      </ul>
-      <p>This data is stored in app-local storage: AsyncStorage; Android device-protected SharedPreferences for native delivery state; and iOS UserDefaults for AlarmKit action routing. Sgt. Snooze does not transmit these records to developer-controlled servers.</p>
-      <p>Uninstalling removes the app's local copy. Operating-system backup, restore, or device-transfer behavior is controlled by the platform and your device settings; the app cannot promise removal of any OS-managed backup copy. On Android, the app's manifest configuration disables Android Auto Backup for this data, subject to standard platform and device-transfer behavior.</p>
-
-      <h2>Permissions and their purpose</h2>
-      <ul>
-        <li><strong>Notifications</strong> — deliver local notification alerts and sounds, including the iOS fallback path and Android auxiliary alarm UI.</li>
-        <li><strong>AlarmKit (supported iPhones)</strong> — schedules a system alarm once you grant AlarmKit authorization. If AlarmKit is unavailable or denied, the app uses the local notification fallback instead.</li>
-        <li><strong>Exact alarms</strong> (<code>USE_EXACT_ALARM</code> / <code>SCHEDULE_EXACT_ALARM</code>) — let Android schedule the alarm trigger at the exact requested time.</li>
-        <li><strong>Full-screen notifications</strong> (<code>USE_FULL_SCREEN_INTENT</code>) — let Android show the ringing UI over the lock screen when the OS and user allow it.</li>
-        <li><strong>Vibration</strong> (<code>VIBRATE</code>) — vibrate when an alarm fires.</li>
-        <li><strong>Run at startup</strong> (<code>RECEIVE_BOOT_COMPLETED</code>) — restore native Android schedules after reboot.</li>
-        <li><strong>Foreground service, wake lock, and audio settings</strong> — play the Android alarm on the alarm audio stream and keep the active alarm flow running. The iOS background-audio mode is used only during an active in-app ring; the app does not use a silent, always-on keep-alive to maintain the armed state.</li>
-        <li><strong>Battery-optimization settings (optional, Android only)</strong> — open the relevant device settings page, since some manufacturers' power management can affect alarm delivery.</li>
-      </ul>
-      <p>The app does not request microphone, contacts, location, camera, or storage access. No permission is used to collect personal information.</p>
-
-      <h2>Spoken audio</h2>
-      <p>Bundled recorded voice clips are the app's default voice source. Where a line has no bundled clip, the app asks the operating system's text-to-speech service to speak it instead. Sgt. Snooze does not run a speech service or receive the underlying text; system TTS providers and their device or network behavior are governed by their own settings and policies.</p>
-
-      <h2>Purchases and subscriptions</h2>
-      <p>Sgt. Snooze does not currently offer paid features, in-app purchases, or subscriptions.</p>
-      <p>If a future version offers a purchase or subscription, the Apple App Store or Google Play will process the standard store transaction. Their handling of account, payment, and purchase-history data is governed by their own policies. Before that feature becomes available, this policy and the applicable App Store privacy information and Google Play Data safety information will be updated to state exactly whether Sgt. Snooze receives, stores, or transmits any purchase receipt, entitlement, identifier, or other purchase-related data. The app and store listing will also provide the applicable price, billing period, renewal, cancellation, Terms of Use, and restore-purchase information.</p>
-
-      <h2>Children</h2>
-      <p>The app does not knowingly collect personal information from anyone, including children under 13 (or the relevant minimum age under applicable local law). If you believe a child has provided personal information through the app, contact us using the details below and we will address it.</p>
-
-      <h2>Changes</h2>
-      <p>If this policy changes, the updated version will be published at this same URL and, where required by law, in the app before the change takes effect.</p>
-
-      <h2>Contact</h2>
-      <p>For privacy questions or requests, contact Grumblebox at <a href="mailto:sentinelgroup24@gmail.com">sentinelgroup24@gmail.com</a>.</p>
-
-      <footer>© 2026 Sgt. Snooze</footer>
-    </main>
-  </body>
-</html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy Policy for Sgt. Snooze by Grumblebox.">
+  <title>Privacy Policy — Sgt. Snooze</title>
+  <style>
+    :root { color-scheme: dark; } * { box-sizing: border-box; }
+    body { margin: 0; background: #17150f; color: #f5f0df; font: 17px/1.65 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    main { max-width: 760px; margin: auto; padding: 48px 24px 72px; }
+    header { border-bottom: 3px solid #c9a34a; margin-bottom: 32px; padding-bottom: 24px; }
+    .eyebrow { color: #c9a34a; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+    h1 { font-size: clamp(2rem, 6vw, 3.5rem); line-height: 1.08; margin: 8px 0; }
+    h2 { color: #f1cd74; font-size: 1.25rem; margin: 36px 0 8px; }
+    ul { padding-left: 1.3rem; } a { color: #f1cd74; } code { overflow-wrap: anywhere; }
+    .updated, footer { color: #c6c1b0; } nav { display: flex; flex-wrap: wrap; gap: 24px; margin-top: 20px; }
+    footer { border-top: 1px solid #5d5848; font-size: .9rem; margin-top: 48px; padding-top: 20px; }
+  </style>
+</head>
+<body><main>
+  <header><div class="eyebrow">Sgt. Snooze</div><h1>Privacy Policy</h1>
+    <p class="updated">Last updated: 2026-09-17</p>
+    <nav aria-label="Policy pages"><a href="./">Privacy Policy</a><a href="terms.html">Subscription Terms</a></nav>
+  </header>
+  <p>Sgt. Snooze is an offline alarm clock published by Grumblebox. The app has no account system, advertising, or developer-operated backend. It does not send, sell, or share your alarm data. Optional billing-enabled builds use RevenueCat for purchase validation and subscription management as described below.</p>
+<h2>Data the app stores locally</h2>
+<p>The app stores the following on your device so it can schedule and run alarms:</p>
+<ul><li><strong>Alarm details:</strong> time, selected weekdays or one-shot date, enabled state, label, persona, retained premium-character selection, challenge, snooze, and volume settings.</li>
+<li><strong>Onboarding data:</strong> an optional onboarding-segmentation response, plus onboarding completion state.</li>
+<li><strong>Technical scheduling data:</strong> native notification/alarm identifiers, pending fire records, and snooze ownership needed to route and clean up alarms reliably.</li></ul>
+<p>This data is stored in app-local storage: AsyncStorage; Android device-protected SharedPreferences for native delivery state; and iOS UserDefaults for AlarmKit action routing. Sgt. Snooze does not transmit these records to developer-controlled servers.</p>
+<p>Uninstalling removes the app's local copy. Operating-system backup, restore, or device-transfer behavior is controlled by the platform and your device settings; the app cannot promise removal of any OS-managed backup copy. On Android, the app's manifest configuration disables Android Auto Backup for this data, subject to standard platform and device-transfer behavior.</p>
+<h2>Permissions and their purpose</h2>
+<ul><li><strong>Notifications</strong> — deliver local notification alerts and sounds, including the iOS fallback path and Android auxiliary alarm UI.</li>
+<li><strong>AlarmKit (supported iPhones)</strong> — schedules a system alarm once you grant AlarmKit authorization. If AlarmKit is unavailable or denied, the app uses the local notification fallback instead.</li>
+<li><strong>Exact alarms</strong> (<code>USE_EXACT_ALARM</code> / <code>SCHEDULE_EXACT_ALARM</code>) — let Android schedule the alarm trigger at the exact requested time.</li>
+<li><strong>Full-screen notifications</strong> (<code>USE_FULL_SCREEN_INTENT</code>) — let Android show the ringing UI over the lock screen when the OS and user allow it.</li>
+<li><strong>Vibration</strong> (<code>VIBRATE</code>) — vibrate when an alarm fires.</li>
+<li><strong>Run at startup</strong> (<code>RECEIVE_BOOT_COMPLETED</code>) — restore native Android schedules after reboot.</li>
+<li><strong>Foreground service, wake lock, and audio settings</strong> — play the Android alarm on the alarm audio stream and keep the active alarm flow running. The iOS background-audio mode is used only during an active in-app ring; the app does not use a silent, always-on keep-alive to maintain the armed state.</li>
+<li><strong>Battery-optimization settings (optional, Android only)</strong> — open the relevant device settings page, since some manufacturers' power management can affect alarm delivery.</li></ul>
+<p>The app does not request microphone, contacts, location, camera, or storage access. No permission is used to collect personal information.</p>
+<h2>Spoken audio</h2>
+<p>Bundled recorded voice clips are the app's default voice source. Where a line has no bundled clip, the app asks the operating system's text-to-speech service to speak it instead. Sgt. Snooze does not run a speech service or receive the underlying text; system TTS providers and their device or network behavior are governed by their own settings and policies.</p>
+<h2>Purchases and subscriptions</h2>
+<p>Production billing is currently disabled. In a billing-enabled build, Apple App Store or Google Play processes purchases and RevenueCat validates subscription access. The app has no login: RevenueCat creates an anonymous app-user identifier and processes purchase/subscription history and device/app information required for its service. RevenueCat also caches customer information on the device. We do not send alarm times, labels, challenges, or character-preview text to RevenueCat. The app does not deliberately set advertising identifiers or custom customer attributes. Payment-card details are handled by the store, not Sgt. Snooze.</p>
+<p>Subscription checks occur at launch, foreground return, purchase, and restore. Saved alarms and bundled audio do not depend on those checks. Builds with billing disabled do not initialize the RevenueCat SDK. There is no cloud alarm backup or cross-store identity: Restore Purchases checks the originating store account and does not restore locally deleted alarms or retained selections.</p>
+<p>Apple, Google and RevenueCat have their own data handling and retention policies: <a href="https://www.apple.com/legal/privacy/">Apple privacy</a>, <a href="https://policies.google.com/privacy">Google privacy</a>, and <a href="https://www.revenuecat.com/privacy/">RevenueCat privacy</a>. For questions about purchase-related data or deletion requests, contact us below; store transaction records may be retained by the providers under their policies.</p>
+<p>The paywall provides the store price, billing period, automatic-renewal terms, cancellation guidance, subscription terms, purchase privacy, and restore action. App Store privacy information and Google Play Data safety disclosures must match the enabled features before distribution.</p>
+<h2>Children</h2>
+<p>The app does not knowingly collect personal information from anyone, including children under 13 (or the relevant minimum age under applicable local law). If you believe a child has provided personal information through the app, contact us using the details below and we will address it.</p>
+<h2>Changes</h2>
+<p>If this policy changes, the updated version will be published at this same URL and, where required by law, in the app before the change takes effect.</p>
+<h2>Contact</h2>
+<p>For privacy questions or requests, contact Grumblebox at <a href="mailto:sentinelgroup24@gmail.com">sentinelgroup24@gmail.com</a>.</p>
+  <footer>© 2026 Sgt. Snooze · Grumblebox · <a href="mailto:sentinelgroup24@gmail.com">Contact support</a></footer>
+</main></body></html>
